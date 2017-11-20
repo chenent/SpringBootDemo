@@ -22,13 +22,17 @@ public class HelloController {
 
     }
 
-    @GetMapping("/books")
-//    @ResponseBody
-//    public String getAll(){
-//
-//        return "books";
-//
-//    }
+    @GetMapping("/books/{id}")
+    @ResponseBody
+    public String getOne(){
+
+        return "books";
+
+    }
+
+
+
+    @GetMapping("/getAll")
     public Object getAll(){
 
         Map<String, Object> map = new HashMap<>();
